@@ -1,10 +1,7 @@
 package org.example.controller;
 
 import com.hellokaton.blade.annotation.Path;
-import com.hellokaton.blade.annotation.request.Body;
-import com.hellokaton.blade.annotation.request.Form;
-import com.hellokaton.blade.annotation.request.PathParam;
-import com.hellokaton.blade.annotation.request.Query;
+import com.hellokaton.blade.annotation.request.*;
 import com.hellokaton.blade.annotation.route.GET;
 import com.hellokaton.blade.annotation.route.POST;
 import com.hellokaton.blade.mvc.RouteContext;
@@ -43,6 +40,20 @@ public class IndexController {
     @POST("/body")
     public void readBody(@Body String data){
         System.out.println("data is:" + data);
+    }
+
+//    @GET("header")
+//    public void readHeader(RouteContext ctx){
+//        System.out.println("Host => " + ctx.header("Host"));
+//        // get useragent
+//        System.out.println("UserAgent => " + ctx.userAgent());
+//        // get client ip
+//        System.out.println("Client Address => " + ctx.address());
+//    }
+
+    @GET("header")
+    public void readHeader(@Header String host){
+        System.out.println("Host => " + host);
     }
 
 }

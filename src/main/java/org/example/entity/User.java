@@ -1,7 +1,19 @@
 package org.example.entity;
 
-public class User {
-  private String username;
-  private Integer age;
-  // getter and setter
+import com.hellokaton.anima.Model;
+
+public class User extends Model {
+    
+    private Integer id;
+    private String  userName;
+    private Integer age;
+    
+    public User() {
+    }
+    
+    public User(String userName, Integer age) {
+        this.userName = userName;
+        this.age = age;
+    }
+    
 }

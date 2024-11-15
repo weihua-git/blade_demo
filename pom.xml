@@ -17,6 +17,20 @@
 
 
 
+    <repositories>
+        <repository>
+            <id>snapshots-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
 
     <dependencies>
         <dependency>
@@ -24,6 +38,29 @@
             <artifactId>blade-core</artifactId>
             <version>2.1.2.RELEASE</version>
         </dependency>
+
+
+
+        <dependency>
+            <groupId>com.hellokaton</groupId>
+            <artifactId>anima</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.9</version>  <!-- 使用适当的版本 -->
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>  <!-- Use the appropriate version -->
+        </dependency>
+
+
+
     </dependencies>
 
 
